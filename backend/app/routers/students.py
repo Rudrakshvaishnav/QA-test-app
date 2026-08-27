@@ -94,7 +94,7 @@ def list_students(
     course: str | None = Query(None, description="Filter by course (partial match)"),
     email: str | None = Query(None, description="Filter by email (partial match)"),
     page: int = Query(1, ge=1, description="Page number"),
-    limit: int = Query(10, ge=1, le=100, description="Items per page"),
+    limit: int = Query(25, ge=1, le=100, description="Items per page"),
     sort: str = Query("id", description="Sort field (id, name, email, course, student_id)"),
     order: str = Query("asc", description="Sort order (asc, desc)"),
     db: Session = Depends(get_db),
