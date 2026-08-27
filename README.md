@@ -4,7 +4,7 @@ A full-stack web application designed as a **QA testing playground**, exposing *
 
 ## Quick Start
 
-### Backend (FastAPI)((
+### Backend (FastAPI)((?
 
 ```bash
 cd backend
