@@ -1,6 +1,6 @@
 {
-  "project_key": "TP1",
-  "generated_at": "2026-09-03T14:37:00.880830+00:00",
+  "project_key": "SAUCE",
+  "generated_at": "2026-09-03T14:37:20.242868+00:00",
   "script_directory": "tests/automation",
   "requested_stages": [
     "SMOKE",
@@ -10,16 +10,16 @@
   ],
   "stages": [
     {
-      "stage": "SMOKE",
-      "order": 0,
+      "stage": "REGRESSION",
+      "order": 2,
       "test_cases": [
         {
-          "manual_test_case_item_id": 1000010,
-          "test_case_id": "TC-267",
-          "test_case_title": "End-to-end: Swag Labs complete shopping and authentication journey",
-          "is_critical": true,
-          "script_path": "smoke/test_end_to_end_swag_labs_complete_shopping_a_projecttp1.py",
-          "framework": "playwright",
+          "manual_test_case_item_id": 999999,
+          "test_case_id": "999999",
+          "test_case_title": "",
+          "is_critical": false,
+          "script_path": "regression/test_999999.py",
+          "framework": "pytest",
           "language": "python"
         }
       ]
