@@ -1,6 +1,6 @@
 {
-  "project_key": "SAUC",
-  "generated_at": "2026-09-02T09:18:51.853345+00:00",
+  "project_key": "TP1",
+  "generated_at": "2026-09-03T14:25:00.729721+00:00",
   "script_directory": "tests/automation",
   "requested_stages": [
     "SMOKE",
@@ -10,15 +10,15 @@
   ],
   "stages": [
     {
-      "stage": "REGRESSION",
-      "order": 2,
+      "stage": "SMOKE",
+      "order": 0,
       "test_cases": [
         {
-          "manual_test_case_item_id": 1000003,
-          "test_case_id": "TC-260",
-          "test_case_title": "Verify successful Swag Labs shopping journey from login to order confirmation",
+          "manual_test_case_item_id": 1000010,
+          "test_case_id": "TC-267",
+          "test_case_title": "End-to-end: Swag Labs complete shopping and authentication journey",
           "is_critical": true,
-          "script_path": "regression/test_verify_successful_swag_labs_shopping_jou_projectsauc.py",
+          "script_path": "smoke/test_end_to_end_swag_labs_complete_shopping_a_projecttp1.py",
           "framework": "playwright",
           "language": "python"
         }
