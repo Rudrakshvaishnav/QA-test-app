@@ -1,6 +1,6 @@
 {
   "project_key": "TP1",
-  "generated_at": "2026-09-08T07:29:24.355938+00:00",
+  "generated_at": "2026-09-08T07:31:26.987407+00:00",
   "script_directory": "tests/automation",
   "requested_stages": [
     "SMOKE",
