@@ -1,24 +1,21 @@
 {
-  "project_key": "TP1",
-  "generated_at": "2026-09-09T05:30:06.467960+00:00",
+  "project_key": "BLAZ",
+  "generated_at": "2026-09-14T14:40:18.938671+00:00",
   "script_directory": "tests/automation",
   "requested_stages": [
-    "SMOKE",
-    "FUNCTIONAL",
-    "REGRESSION",
-    "PERFORMANCE"
+    "SMOKE"
   ],
   "stages": [
     {
-      "stage": "FUNCTIONAL",
-      "order": 1,
+      "stage": "SMOKE",
+      "order": 0,
       "test_cases": [
         {
-          "manual_test_case_item_id": 1000010,
+          "manual_test_case_item_id": 1000014,
           "test_case_id": "TC-267",
-          "test_case_title": "End-to-end: Swag Labs complete shopping and authentication journey",
+          "test_case_title": "Verify successful flight ticket booking",
           "is_critical": true,
-          "script_path": "functional/test_end_to_end_swag_labs_complete_shopping_a_projecttp1.py",
+          "script_path": "smoke/test_verify_successful_flight_ticket_booking_projectblaz.py",
           "framework": "playwright",
           "language": "python"
         }
