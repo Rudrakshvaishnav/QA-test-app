@@ -1,6 +1,6 @@
 {
-  "project_key": "SAUC",
-  "generated_at": "2026-09-14T20:10:52.555213+00:00",
+  "project_key": "PARA",
+  "generated_at": "2026-10-05T11:33:13.267724+00:00",
   "script_directory": "tests/automation",
   "requested_stages": [
     "SMOKE"
@@ -11,11 +11,11 @@
       "order": 0,
       "test_cases": [
         {
-          "manual_test_case_item_id": 1000028,
-          "test_case_id": "TC-285",
-          "test_case_title": "End-to-end: Complete shopping journey on Swag Labs",
+          "manual_test_case_item_id": 1000418,
+          "test_case_id": "TC-415",
+          "test_case_title": "Verify loan request submission",
           "is_critical": true,
-          "script_path": "smoke/test_end_to_end_complete_shopping_journey_on_projectsauc.py",
+          "script_path": "smoke/test_verify_loan_request_submission_projectpara.py",
           "framework": "playwright",
           "language": "python"
         }
