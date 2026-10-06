@@ -1,6 +1,6 @@
 {
   "project_key": "PARA",
-  "generated_at": "2026-10-06T10:53:16.151706+00:00",
+  "generated_at": "2026-10-06T10:55:16.431853+00:00",
   "script_directory": "tests/automation",
   "requested_stages": [
     "SMOKE"
