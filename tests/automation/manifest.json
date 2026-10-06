@@ -57,9 +57,24 @@
           "language": "python"
         }
       ]
+    },
+    {
+      "stage": "PERFORMANCE",
+      "order": 3,
+      "test_cases": [
+        {
+          "manual_test_case_item_id": 1000420,
+          "test_case_id": "TC-417",
+          "test_case_title": "End-to-end: Loan request submission process",
+          "is_critical": true,
+          "script_path": "performance/test_end_to_end_loan_request_submission_proce_projectpara.py",
+          "framework": "playwright",
+          "language": "python"
+        }
+      ]
     }
   ],
-  "total_test_cases": 3,
+  "total_test_cases": 4,
   "skipped_no_script": 0,
   "skipped_item_ids": [],
   "diagnostics": {
