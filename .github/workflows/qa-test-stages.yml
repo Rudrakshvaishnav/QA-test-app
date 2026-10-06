@@ -95,7 +95,7 @@ jobs:
           if not report.exists():
               print(f"::error::{stage}: no JUnit report was produced")
               sys.exit(1)
-          critical = {case["test_case_id"] for case in expected if case.get("is_critical")}
+          critical_cases = [c for c in expected if c.get("is_critical")]
 
           root = ET.parse(report).getroot()
           collected = len(list(root.iter("testcase")))
@@ -116,8 +116,13 @@ jobs:
           for case in root.iter("testcase"):
               if case.find("failure") is None and case.find("error") is None:
                   continue
-              node = f"{case.get('classname', '')}.{case.get('name', '')}"
-              failed.extend(tc for tc in critical if tc and tc in node)
+              node = f"{case.get('classname', '')}.{case.get('name', '')}.{case.get('file', '')}"
+              for cc in critical_cases:
+                  tc_id = str(cc.get("test_case_id") or "")
+                  script_p = str(cc.get("script_path") or "")
+                  stem = Path(script_p).stem if script_p else ""
+                  if (tc_id and tc_id in node) or (stem and stem in node):
+                      failed.append(tc_id or stem)
 
           if failed:
               print(f"::error::{stage} gate failed. Critical: {sorted(set(failed))}")
@@ -210,7 +215,7 @@ jobs:
           if not report.exists():
               print(f"::error::{stage}: no JUnit report was produced")
               sys.exit(1)
-          critical = {case["test_case_id"] for case in expected if case.get("is_critical")}
+          critical_cases = [c for c in expected if c.get("is_critical")]
 
           root = ET.parse(report).getroot()
           collected = len(list(root.iter("testcase")))
@@ -231,8 +236,13 @@ jobs:
           for case in root.iter("testcase"):
               if case.find("failure") is None and case.find("error") is None:
                   continue
-              node = f"{case.get('classname', '')}.{case.get('name', '')}"
-              failed.extend(tc for tc in critical if tc and tc in node)
+              node = f"{case.get('classname', '')}.{case.get('name', '')}.{case.get('file', '')}"
+              for cc in critical_cases:
+                  tc_id = str(cc.get("test_case_id") or "")
+                  script_p = str(cc.get("script_path") or "")
+                  stem = Path(script_p).stem if script_p else ""
+                  if (tc_id and tc_id in node) or (stem and stem in node):
+                      failed.append(tc_id or stem)
 
           if failed:
               print(f"::error::{stage} gate failed. Critical: {sorted(set(failed))}")
@@ -326,7 +336,7 @@ jobs:
           if not report.exists():
               print(f"::error::{stage}: no JUnit report was produced")
               sys.exit(1)
-          critical = {case["test_case_id"] for case in expected if case.get("is_critical")}
+          critical_cases = [c for c in expected if c.get("is_critical")]
 
           root = ET.parse(report).getroot()
           collected = len(list(root.iter("testcase")))
@@ -347,8 +357,13 @@ jobs:
           for case in root.iter("testcase"):
               if case.find("failure") is None and case.find("error") is None:
                   continue
-              node = f"{case.get('classname', '')}.{case.get('name', '')}"
-              failed.extend(tc for tc in critical if tc and tc in node)
+              node = f"{case.get('classname', '')}.{case.get('name', '')}.{case.get('file', '')}"
+              for cc in critical_cases:
+                  tc_id = str(cc.get("test_case_id") or "")
+                  script_p = str(cc.get("script_path") or "")
+                  stem = Path(script_p).stem if script_p else ""
+                  if (tc_id and tc_id in node) or (stem and stem in node):
+                      failed.append(tc_id or stem)
 
           if failed:
               print(f"::error::{stage} gate failed. Critical: {sorted(set(failed))}")
@@ -443,7 +458,7 @@ jobs:
           if not report.exists():
               print(f"::error::{stage}: no JUnit report was produced")
               sys.exit(1)
-          critical = {case["test_case_id"] for case in expected if case.get("is_critical")}
+          critical_cases = [c for c in expected if c.get("is_critical")]
 
           root = ET.parse(report).getroot()
           collected = len(list(root.iter("testcase")))
@@ -464,8 +479,13 @@ jobs:
           for case in root.iter("testcase"):
               if case.find("failure") is None and case.find("error") is None:
                   continue
-              node = f"{case.get('classname', '')}.{case.get('name', '')}"
-              failed.extend(tc for tc in critical if tc and tc in node)
+              node = f"{case.get('classname', '')}.{case.get('name', '')}.{case.get('file', '')}"
+              for cc in critical_cases:
+                  tc_id = str(cc.get("test_case_id") or "")
+                  script_p = str(cc.get("script_path") or "")
+                  stem = Path(script_p).stem if script_p else ""
+                  if (tc_id and tc_id in node) or (stem and stem in node):
+                      failed.append(tc_id or stem)
 
           if failed:
               print(f"::error::{stage} gate failed. Critical: {sorted(set(failed))}")
