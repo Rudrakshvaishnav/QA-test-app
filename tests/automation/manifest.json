@@ -1,6 +1,10 @@
 {
   "project_key": "PARA",
-  "generated_at": "2026-10-06T11:29:16.496907+00:00",
+  "base_url": "https://parabank.parasoft.com/parabank/index.htm",
+  "credentials": {
+    "username": "ww"
+  },
+  "generated_at": "2026-10-06T09:00:59.243095+00:00",
   "script_directory": "tests/automation",
   "requested_stages": [
     "SMOKE"

@@ -21,6 +21,7 @@ permissions:
 
 env:
   QA_SCRIPT_DIR: tests/automation
+  PYTHONPATH: tests/automation
 
 jobs:
   smoke:
@@ -45,6 +46,8 @@ jobs:
 
       - name: Run smoke tests
         continue-on-error: true
+        env:
+          PYTHONPATH: tests/automation
         run: |
           # A stage folder that does not exist, or holds no file pytest would
           # collect, is not a failure: nothing is classified into this stage yet.
@@ -165,6 +168,8 @@ jobs:
 
       - name: Run functional tests
         continue-on-error: true
+        env:
+          PYTHONPATH: tests/automation
         run: |
           # A stage folder that does not exist, or holds no file pytest would
           # collect, is not a failure: nothing is classified into this stage yet.
@@ -286,6 +291,8 @@ jobs:
 
       - name: Run regression tests
         continue-on-error: true
+        env:
+          PYTHONPATH: tests/automation
         run: |
           # A stage folder that does not exist, or holds no file pytest would
           # collect, is not a failure: nothing is classified into this stage yet.
@@ -408,6 +415,8 @@ jobs:
 
       - name: Run performance tests
         continue-on-error: true
+        env:
+          PYTHONPATH: tests/automation
         run: |
           # A stage folder that does not exist, or holds no file pytest would
           # collect, is not a failure: nothing is classified into this stage yet.
