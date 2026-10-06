@@ -1,6 +1,6 @@
 {
   "project_key": "PARA",
-  "generated_at": "2026-10-05T11:33:13.267724+00:00",
+  "generated_at": "2026-10-06T10:49:16.089001+00:00",
   "script_directory": "tests/automation",
   "requested_stages": [
     "SMOKE"
@@ -11,11 +11,11 @@
       "order": 0,
       "test_cases": [
         {
-          "manual_test_case_item_id": 1000418,
-          "test_case_id": "TC-415",
-          "test_case_title": "Verify loan request submission",
+          "manual_test_case_item_id": 1000420,
+          "test_case_id": "TC-417",
+          "test_case_title": "End-to-end: Loan request submission process",
           "is_critical": true,
-          "script_path": "smoke/test_verify_loan_request_submission_projectpara.py",
+          "script_path": "smoke/test_end_to_end_loan_request_submission_proce_projectpara.py",
           "framework": "playwright",
           "language": "python"
         }
@@ -24,5 +24,30 @@
   ],
   "total_test_cases": 1,
   "skipped_no_script": 0,
-  "skipped_item_ids": []
+  "skipped_item_ids": [],
+  "diagnostics": {
+    "missing_script": [],
+    "missing_stage": [],
+    "stage_mismatch": [],
+    "unapproved": [
+      {
+        "item_id": 1000418,
+        "test_case_id": "TC-415",
+        "test_case_title": "Verify loan request submission",
+        "approval_status": "DRAFT"
+      },
+      {
+        "item_id": 1000419,
+        "test_case_id": "TC-416",
+        "test_case_title": "Verify loan request submission rejects invalid loan amount",
+        "approval_status": "DRAFT"
+      },
+      {
+        "item_id": 1000421,
+        "test_case_id": "TC-418",
+        "test_case_title": "Non-Functional: Loan request submission performance",
+        "approval_status": "DRAFT"
+      }
+    ]
+  }
 }
