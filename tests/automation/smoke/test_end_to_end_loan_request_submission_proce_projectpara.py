@@ -1,7 +1,7 @@
 # PARTIAL SCRIPT: this run did not complete every approved step.
 # It covers only the successfully verified prefix of the manual test case
 # and is runnable for those steps; see the run report for what is missing.
-# Target file: tests/test_verify_loan_request_submission.py
+# Target file: tests/test_end_to_end_loan_request_submission_process.py
 # Generated execution model:
 # - language: python
 # - test_framework: pytest
@@ -30,8 +30,7 @@ class LoginPage:
     LOCATOR_1 = 'input[name="username"]'
     LOCATOR_2 = 'input[name="password"]'
     LOCATOR_3 = 'input.button'
-    LOCATOR_4 = 'https://parabank.parasoft.com/parabank/index.htm'
-    LOCATOR_5 = 'internal:role=link[name="Account History"]'
+    LOCATOR_4 = 'internal:role=link[name="Admin Page"]'
 
     def enter_user123_into_the_username_field(self, page: Page, test_data: dict) -> None:
         page.locator('input[name="username"]').fill(test_data['username'])
@@ -45,12 +44,11 @@ class LoginPage:
         page.locator('input.button').click()
 
     def click_the_request_loan_button(self, page: Page, test_data: dict) -> None:
-        page.goto('https://parabank.parasoft.com/parabank/index.htm')
-        expect(getattr(page, '_page', page)).to_have_url(re.compile('https://parabank.parasoft.com/parabank/index.htm'.replace('?', '\\?')))
-        page.get_by_role("link", name='Account History').click()
+        page.wait_for_timeout(1000)
+        page.get_by_role("link", name='Admin Page').click()
 
 
-def test_verify_loan_request_submission(page: Page, vtest_base_url: str, test_data: dict) -> None:
+def test_end_to_end_loan_request_submission_process(page: Page, vtest_base_url: str, test_data: dict) -> None:
     page.goto(vtest_base_url)
 
     login_page = LoginPage()
